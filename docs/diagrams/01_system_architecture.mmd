@@ -1,0 +1,20 @@
+flowchart TB
+    U(["User at the terminal"]) --> S8["Section 8: main menu"]
+
+    S8 --> S4["Section 4: Module A - crop records"]
+    S8 --> S5["Section 5: Module B - disease advisor"]
+    S8 --> S7["Section 7: Module C - history and reports"]
+
+    S4 --> S2["Section 2: Record, Crop classes"]
+    S5 --> S3["Section 3: DISEASES dictionary"]
+    S5 --> S6["Section 6: history.txt reading/writing"]
+    S7 --> S6
+
+    S4 --> F1[("crops.txt")]
+    S6 --> F2[("history.txt")]
+    S7 --> F3[("history_export.csv and summary_report.txt")]
+
+    S4 -.-> S1["Section 1: ask, check, log helpers"]
+    S5 -.-> S1
+    S7 -.-> S1
+    S1 --> LG[("cropcare_log.txt")]

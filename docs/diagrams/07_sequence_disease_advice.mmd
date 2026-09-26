@@ -1,0 +1,20 @@
+sequenceDiagram
+    actor User
+    participant DA as Section 5 (disease advisor)
+    participant DD as Section 3 (DISEASES)
+    participant HI as Section 6 (history.txt)
+    participant F as history.txt
+
+    User->>DA: choose 2 Disease advisor, crop ID
+    DA->>DD: get_symptoms(crop name)
+    DD-->>DA: list of symptoms
+    DA-->>User: show numbered symptoms
+    User->>DA: symptom numbers
+    loop each disease of the crop
+        DA->>DA: score_disease(disease, chosen)
+    end
+    DA-->>User: top 3 with treatment and prevention
+    DA->>HI: add_history(...)
+    HI->>F: save_history(history)
+    HI-->>DA: record
+    DA-->>User: Saved to history as A001

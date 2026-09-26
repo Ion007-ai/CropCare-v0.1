@@ -1,0 +1,18 @@
+2026-09-24 02:05:13 | Skipped a damaged line in temp_test_crops.txt
+2026-09-24 02:05:13 | Could not save no_such_folder/crops.txt
+2026-09-24 02:05:13 | Advisory A001 saved for C001
+2026-09-24 02:05:13 | Advisory A002 saved for C001
+2026-09-24 02:05:13 | Advisory A001 saved for C001
+2026-09-24 02:05:13 | Advisory A001 saved for C001
+2026-09-24 02:05:13 | Advisory A002 saved for C001
+2026-09-24 02:05:13 | Advisory A003 saved for C001
+2026-09-24 02:05:13 | Advisory A004 saved for C002
+2026-09-24 02:05:13 | Advisory A001 saved for C001
+2026-09-24 02:05:13 | Advisory A002 saved for C001
+2026-09-24 02:05:13 | Advisory A003 saved for C001
+2026-09-24 02:05:13 | Advisory A004 saved for C002
+2026-09-24 02:05:13 | Advisory A001 saved for C001
+2026-09-24 02:05:13 | Advisory A002 saved for C001
+2026-09-24 02:05:13 | Advisory A003 saved for C001
+2026-09-24 02:05:13 | Advisory A004 saved for C002
+2026-09-24 02:05:13 | Exported 3 rows to temp_test_export.csv

@@ -1,0 +1,23 @@
+sequenceDiagram
+    actor User
+    participant Main as Section 8 (main menu)
+    participant CR as Section 4 (crop records)
+    participant HP as Section 1 (helpers)
+    participant F as crops.txt
+
+    User->>Main: choose 1 Manage crops
+    Main->>CR: crops_menu(crops)
+    User->>CR: choose 1 Add a crop
+    loop for each question
+        CR->>HP: ask_...(question)
+        HP->>User: ask
+        User-->>HP: answer
+        alt answer wrong
+            HP-->>User: show message and ask again
+        else answer good
+            HP-->>CR: checked value
+        end
+    end
+    CR->>CR: create Crop and add it to the list
+    CR->>F: save_crops(crops)
+    CR-->>User: Saved: C001 Wheat (...)

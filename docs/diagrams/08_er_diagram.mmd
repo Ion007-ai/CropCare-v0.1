@@ -1,0 +1,28 @@
+erDiagram
+    CROP ||--o{ ADVISORY : "gets"
+    DISEASE ||--o{ ADVISORY : "is top match of"
+
+    CROP {
+        string id PK
+        string name
+        string field
+        float area_acres
+        string sowing_date
+        string season
+    }
+    DISEASE {
+        string crop_name
+        string name
+        list symptoms
+        string treatment
+        string prevention
+    }
+    ADVISORY {
+        string id PK
+        string time
+        string crop_id FK
+        string crop_name
+        string disease
+        float score_percent
+        list symptoms
+    }

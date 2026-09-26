@@ -1,0 +1,28 @@
+flowchart LR
+    U(["User: farmer or student"])
+
+    subgraph SYS["CropCare"]
+        UC1(("Add crop"))
+        UC2(("View crops"))
+        UC3(("Update crop"))
+        UC4(("Delete crop"))
+        UC5(("Get disease advice"))
+        UC6(("Choose crop"))
+        UC7(("Choose symptoms"))
+        UC8(("Save advice to history"))
+        UC9(("View history"))
+        UC10(("Show summary"))
+        UC11(("Export CSV or text"))
+    end
+
+    U --- UC1
+    U --- UC2
+    U --- UC3
+    U --- UC4
+    U --- UC5
+    U --- UC9
+    U --- UC10
+    U --- UC11
+    UC5 -.->|include| UC6
+    UC5 -.->|include| UC7
+    UC5 -.->|include| UC8

@@ -1,0 +1,24 @@
+flowchart TD
+    A(["Start"]) --> B["Load crops.txt and history.txt"]
+    B --> C["Main menu"]
+    C --> D{"Choice"}
+
+    D -- "1 Manage crops" --> E["Add, view, update or delete"]
+    E --> F{"Answer valid?"}
+    F -- No --> G["Show message and ask again"]
+    G --> E
+    F -- Yes --> H["Save to crops.txt"]
+    H --> C
+
+    D -- "2 Disease advisor" --> I["Choose a saved crop"]
+    I --> J["Show symptom list for that crop"]
+    J --> K["User types symptom numbers"]
+    K --> L["Score each disease with sets"]
+    L --> M["Show top 3 with treatment and prevention"]
+    M --> N["Save advice to history.txt"]
+    N --> C
+
+    D -- "3 History and reports" --> O["View history, summary or export"]
+    O --> C
+
+    D -- "4 Exit" --> Z(["End"])

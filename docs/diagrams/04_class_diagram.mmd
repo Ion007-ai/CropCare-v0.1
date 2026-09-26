@@ -1,0 +1,15 @@
+classDiagram
+    class Record {
+        +record_id
+        +__init__(record_id)
+    }
+    class Crop {
+        +name
+        +field
+        +area
+        +sowing_date
+        +season
+        +to_line()
+        +__str__()
+    }
+    Record <|-- Crop

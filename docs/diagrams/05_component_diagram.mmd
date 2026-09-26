@@ -1,0 +1,15 @@
+flowchart LR
+    Sec8["Section 8: main()"] --> Sec4["Section 4: crop records"]
+    Sec8 --> Sec5["Section 5: disease advisor"]
+    Sec8 --> Sec7["Section 7: reports"]
+    Sec4 --> Sec2["Section 2: Crop class"]
+    Sec4 --> Sec3["Section 3: DISEASES"]
+    Sec4 --> Sec1["Section 1: helpers"]
+    Sec5 --> Sec4
+    Sec5 --> Sec3
+    Sec5 --> Sec6["Section 6: history.txt"]
+    Sec5 --> Sec1
+    Sec7 --> Sec4
+    Sec7 --> Sec1
+    Sec6 --> Sec1
+    Sec2 --> Sec1
